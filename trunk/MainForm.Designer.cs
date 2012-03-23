@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.m_toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.m_tree = new System.Windows.Forms.TreeView();
             this.m_imageList = new System.Windows.Forms.ImageList(this.components);
@@ -91,7 +90,7 @@
             // 
             // m_openButton
             // 
-            this.m_openButton.Image = global::SDepends.Properties.Resources.Assembly;
+            this.m_openButton.Image = global::SDepends.Properties.Resources.References;
             this.m_openButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.m_openButton.Name = "m_openButton";
             this.m_openButton.Size = new System.Drawing.Size(53, 22);
@@ -103,7 +102,7 @@
             this.m_excludeSystem.Checked = true;
             this.m_excludeSystem.CheckOnClick = true;
             this.m_excludeSystem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.m_excludeSystem.Image = ((System.Drawing.Image)(resources.GetObject("m_excludeSystem.Image")));
+            this.m_excludeSystem.Image = global::SDepends.Properties.Resources.System;
             this.m_excludeSystem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.m_excludeSystem.Name = "m_excludeSystem";
             this.m_excludeSystem.Size = new System.Drawing.Size(150, 22);
