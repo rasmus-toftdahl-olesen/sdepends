@@ -15,6 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkSubset>
     </TargetFrameworkSubset>
+    <ApplicationIcon>Resources\SDepends.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -93,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\applications-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SDepends.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

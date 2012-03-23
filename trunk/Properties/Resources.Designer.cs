@@ -88,6 +88,13 @@ namespace SDepends.Properties {
             }
         }
         
+        internal static System.Drawing.Icon SDepends {
+            get {
+                object obj = ResourceManager.GetObject("SDepends", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap System {
             get {
                 object obj = ResourceManager.GetObject("System", resourceCulture);

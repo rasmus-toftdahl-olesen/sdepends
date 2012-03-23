@@ -26,6 +26,8 @@ namespace SDepends
         {
             InitializeComponent();
 
+            this.Icon = Properties.Resources.SDepends;
+            
             m_imageList.Images.Add(ImageNames.Root, Properties.Resources.Root);
             m_imageList.Images.Add(ImageNames.References, Properties.Resources.References);
             m_imageList.Images.Add(ImageNames.Info, Properties.Resources.Info);
