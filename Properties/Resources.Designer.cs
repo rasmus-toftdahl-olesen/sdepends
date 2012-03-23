@@ -60,13 +60,6 @@ namespace SDepends.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap Assembly {
-            get {
-                object obj = ResourceManager.GetObject("Assembly", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap Info {
             get {
                 object obj = ResourceManager.GetObject("Info", resourceCulture);
@@ -74,9 +67,30 @@ namespace SDepends.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap References {
+            get {
+                object obj = ResourceManager.GetObject("References", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Resolved {
             get {
                 object obj = ResourceManager.GetObject("Resolved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Root {
+            get {
+                object obj = ResourceManager.GetObject("Root", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap System {
+            get {
+                object obj = ResourceManager.GetObject("System", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

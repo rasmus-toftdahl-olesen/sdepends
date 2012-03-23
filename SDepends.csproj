@@ -80,11 +80,19 @@
     <None Include="Resources\weather-storm.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\folder.png" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Resources\mail-attachment.png" />
+    <None Include="Resources\internet-group-chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-x-generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start-here.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-system.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,16 +11,26 @@ namespace SDepends
 {
     public partial class MainForm : Form
     {
+        private class ImageNames
+        {
+            public const string Root = "Root";
+            public const string References = "References";
+            public const string Info = "Info";
+            public const string Resolved = "Resolved";
+            public const string Unresolved = "Unresolved";
+        }
+        
         private string m_currentFile;
         
         public MainForm()
         {
             InitializeComponent();
 
-            m_imageList.Images.Add("Assembly", Properties.Resources.Assembly);
-            m_imageList.Images.Add("Info", Properties.Resources.Info);
-            m_imageList.Images.Add("Resolved", Properties.Resources.Resolved);
-            m_imageList.Images.Add("Unresolved", Properties.Resources.Unresolved);
+            m_imageList.Images.Add(ImageNames.Root, Properties.Resources.Root);
+            m_imageList.Images.Add(ImageNames.References, Properties.Resources.References);
+            m_imageList.Images.Add(ImageNames.Info, Properties.Resources.Info);
+            m_imageList.Images.Add(ImageNames.Resolved, Properties.Resources.Resolved);
+            m_imageList.Images.Add(ImageNames.Unresolved, Properties.Resources.Unresolved);
         }
 
         public void Open(string _dllFilename)
@@ -28,8 +38,8 @@ namespace SDepends
             m_tree.Nodes.Clear();
             m_currentFile = _dllFilename;
             TreeNode root = m_tree.Nodes.Add(_dllFilename);
-            root.ImageKey = "Assembly";
-            root.SelectedImageKey = "Assembly";
+            root.ImageKey = ImageNames.Root;
+            root.SelectedImageKey = ImageNames.Root;
             Examine(root, _dllFilename);
             //m_tree.ExpandAll();
         }
@@ -49,12 +59,12 @@ namespace SDepends
             AssemblyName assemblyName = AssemblyName.GetAssemblyName(_dllFilename);
             AddAssemblyNameInfo(_parent, assemblyName);
 
-            TreeNode references = AddNode(_parent, "Assembly", "References");
+            TreeNode references = AddNode(_parent, ImageNames.References, "References");
             foreach (AssemblyName info in assembly.GetReferencedAssemblies())
             {
                 if (!m_excludeSystem.Checked || !(info.Name.StartsWith("System") || info.Name == "mscorlib"))
                 {
-                    TreeNode assemblyRoot = AddNode(references, "Unresolved", info.FullName);
+                    TreeNode assemblyRoot = AddNode(references, ImageNames.Unresolved, info.FullName);
                     string fullpath = Path.Combine(Path.GetDirectoryName(_dllFilename), info.Name + ".dll");
                     if (File.Exists(fullpath))
                     {
@@ -62,8 +72,8 @@ namespace SDepends
                         AssemblyName foundAssemblyName = AssemblyName.GetAssemblyName(fullpath);
                         if (foundAssemblyName.FullName.Equals(info.FullName))
                         {
-                            assemblyRoot.ImageKey = "Resolved";
-                            assemblyRoot.SelectedImageKey = "Resolved";
+                            assemblyRoot.ImageKey = ImageNames.Resolved;
+                            assemblyRoot.SelectedImageKey = ImageNames.Resolved;
                             AddInfo(assemblyRoot, "AssemblyName", "Matches");
                             Examine(assemblyRoot, fullpath);
                         }
@@ -93,7 +103,7 @@ namespace SDepends
 
         private void AddInfo(TreeNode _parent, string _key, object _value)
         {
-            AddNode(_parent, "Info", "{0} = {1}", _key, _value);
+            AddNode(_parent, ImageNames.Info, "{0} = {1}", _key, _value);
         }
 
         private TreeNode AddNode(TreeNode _parent, string _imageKey, string _textFormat, params object[] _textArgs)
