@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SDepends")]
 [assembly: AssemblyDescription("Simple .net dependency lister for DLL and EXE files.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Sequanto A/S")]
+[assembly: AssemblyCompany("CIM Software Testing A/S")]
 [assembly: AssemblyProduct("Sequanto Depends")]
-[assembly: AssemblyCopyright("Copyright ©  2012 Sequanto")]
+[assembly: AssemblyCopyright("Copyright © 2012-2017 CIM Software Testing A/S")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.0")]
-[assembly: AssemblyFileVersion("0.1.0")]
+[assembly: AssemblyVersion("0.2.0")]
+[assembly: AssemblyFileVersion("0.2.0")]
